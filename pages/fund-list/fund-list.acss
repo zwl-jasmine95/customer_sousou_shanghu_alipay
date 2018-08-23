@@ -1,0 +1,19 @@
+.content{
+    padding: 20rpx;
+}
+
+.fund-card{
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.fund-card .card-title{
+    height: 88rpx;
+    line-height: 88rpx;
+}
+.fund-card .card-detail{
+    padding: 15rpx 0;
+}
+.fund-card .card-item{
+    padding: 15rpx 0;
+}

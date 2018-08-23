@@ -1,0 +1,39 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="list-content">
+        <view class="list-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}" url="/pages/take-detail/take-detail?id={{item.id}}">
+            <view class="item clearfix">
+                <view class="item-tag fl">求助时间：</view>
+                <view class="item-detail cr-a fl">{{item.help_time}}</view>
+            </view>
+            <view class="item clearfix">
+                <view class="item-tag fl">求助人数：</view>
+                <view class="item-detail cr-a fl">{{item.help_num}}</view>
+            </view>
+            <view class="item clearfix">
+                <view class="item-tag fl">订单时间：</view>
+                <view class="item-detail cr-a fl">{{item.order_time}}</view>
+            </view>
+            <view class="item clearfix">
+                <view class="item-tag fl">处理状态：</view>
+                <view class="item-detail cr-a fl">{{item.status_text}}</view>
+            </view>
+            <view class="item clearfix">
+                <view class="item-tag fl">求助原因：</view>
+                <view class="item-detail cr-a fl">{{item.help_reason}}</view>
+            </view>
+        </view>
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+    
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+</scroll-view>
+
+<navigator url="/pages/help/help" class="help-btn bg-green">
+    <image src="/images/help.png" mode="widthFix" />
+    <text class="btn-text fs-b cr-w">求助</text>
+</navigator>
+

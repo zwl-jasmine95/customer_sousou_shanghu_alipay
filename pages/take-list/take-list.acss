@@ -1,0 +1,30 @@
+
+.scroll-box{
+    height: calc(100vh - 120rpx);
+}
+/* 主体 */
+.list-content{
+    padding: 20rpx;
+}
+.list-card{
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.list-card .list-msg{
+    box-sizing: border-box;
+    padding: 15rpx 0;
+}
+.list-card .list-msg .item{
+    padding: 15rpx 0;
+}
+
+
+.list-card .list-btn{
+    padding: 20rpx 0;
+}
+.list-card .list-btn button{
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}

@@ -1,0 +1,23 @@
+<form onSubmit="form_submit">
+    <view class="input-content white">
+        <view class="input-item br-b">
+            <view class="input-label">求助时间：</view>
+            <view class="input-detail clearfix" onTap="select_time">
+                <input type="text" name="time" class="fs-n cr-n fl" value="{{help_time}}" placeholder="填写求助时间" disabled />
+                <image src="/images/arrow.png" class="fr" mode="widthFix" />
+            </view>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">求助人数：</view>
+            <input type="number" name="num" class="fs-n cr-n" placeholder="填写求助人数" />
+        </view>
+        <view class="input-item input-textarea">
+            <view class="input-label">求助原因：</view>
+            <textarea name="reason" class="fs-n cr-n" placeholder="填写求助原因" />
+        </view>
+    </view>
+
+    <view class="bottom-btn-box fixed">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">提交</button>
+    </view> 
+<form>

@@ -1,0 +1,13 @@
+.scroll-box{
+    height: calc(100vh - 120rpx);
+}
+
+/* 主体 */
+.list-content{
+    margin: 20rpx 0;
+}
+.list-item{
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 20rpx;
+}

@@ -1,0 +1,98 @@
+.scroll-box{
+    height: calc(100vh - 120rpx);
+}
+
+/* 主体 */
+.list-content{
+    padding: 20rpx;
+}
+.list-card{
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.list-card .list-msg{
+    box-sizing: border-box;
+    padding: 15rpx 0;
+}
+.list-card .list-msg .item{
+    padding: 15rpx 0;
+}
+.list-card .list-msg .item .title{
+    font-size: 30rpx;
+}
+.list-card .list-msg .item .msg{
+    vertical-align: baseline;
+    margin-right: 20rpx;
+}
+.list-card .list-msg .item .price{
+    font-size: 30rpx!important;
+}
+
+.list-card .list-btn{
+    padding: 20rpx 0;
+}
+.list-card .list-btn button{
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+
+/* 弹框 */
+.popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.popup .popup-box{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.popup .popup-box .close-box{
+    padding: 20rpx 20rpx 0 0;
+    text-align: right;
+    font-size: 60rpx;
+}
+.popup .popup-box button{
+    margin: 34rpx 20rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+
+.popup-box .input-item{
+    padding: 35rpx 20rpx;
+    height: 158rpx;
+    box-sizing: border-box;
+}
+.popup-box .input-item .input-label{
+   margin-bottom: 15rpx;
+}
+.popup-box .input-item .input-detail{
+   margin-bottom: 15rpx;
+}
+.popup-box .input-item input{
+    width: 100%;
+    padding: 0;
+}
+.row{
+    height: 70rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.row .row-extra {
+    flex-basis: initial;
+}
+.row .row-arrow {
+    width: 30rpx;
+    position: absolute;
+    right: 0;
+}

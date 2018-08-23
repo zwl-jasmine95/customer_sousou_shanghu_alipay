@@ -1,0 +1,42 @@
+
+.scroll-box{
+    height:100vh;
+}
+/* 主体 */
+.list-content{
+    margin: 20rpx;
+}
+.list-card{
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.list-card .item{
+    padding: 15rpx 0;
+}
+.list-card .item .item-tag{
+    width: 150rpx;
+}
+.list-card .item .item-detail{
+    width: calc(100% - 150rpx);
+}
+
+.help-btn{
+    position: fixed;
+    right: 0;
+    bottom: 120rpx;
+    width: 180rpx;
+    height: 70rpx;
+    border-radius: 10rpx;
+    text-align: center;
+}
+.help-btn image{
+    width: 50rpx;
+    vertical-align: -14rpx;
+    margin-right: 10rpx;
+}
+.help-btn text{
+    line-height: 70rpx;
+   
+}

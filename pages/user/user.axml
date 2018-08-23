@@ -1,0 +1,50 @@
+<navigator class="header white clearfix" url="/pages/user-detail/user-detail">
+    <image class="portrait fl" src="{{img}}" mode="widthFix" />
+    <view class="name fl fs-b">{{name}}</view>
+    <image class="arrow fr" src="/images/arrow.png" mode="widthFix" />
+</navigator>
+
+<view class="number grid-box white">
+    <view class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <text class="grid-title cr-a">累计配送总数</text>
+          <text class="grid-text">{{distribution_total}}</text>
+      </view>
+    </view>
+    <view class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <text class="grid-title cr-a">累计收寄总数</text>
+          <text class="grid-text">{{take_receive_total}}</text>
+      </view>
+    </view>
+    <view class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <text class="grid-title cr-a">累计投诉总数</text>
+          <text class="grid-text">{{complaint_total}}</text>
+      </view>
+    </view>
+    <view class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <text class="grid-title cr-a">累计邀请总数</text>
+          <text class="grid-text">{{invitation_total}}</text>
+      </view>
+    </view>
+</view>
+
+<view class="money-box clearfix white">
+    <view class="box-item fl">
+        <image class="arrow fl" src="/images/nav-icon-putforward.png" mode="widthFix" />
+        <view class="item-right fl">
+            <view class="item-title">可用：</view>
+            <view class="item-price fs-l fw-b">{{available_money}} 元</view>
+            <button class="btn my-btn-default" hover-class="none" onTap="put_forward">提现</button>
+        </view>
+    </view>
+    <view class="box-item fl">
+        <view class="item-title">冻结：</view>
+        <view class="item-price fs-l cr-a fw-b">{{unavailable_money}} 元</view>
+        <navigator url="/pages/fund-list/fund-list" class="btn fs-b cr-a">明细</navigator>
+    </view>
+</view>
+
+<view class="tel cr-green fs-s">客服电话: {{customer_tel}}</view>

@@ -1,0 +1,27 @@
+page{
+    background-color: #fff;
+}
+
+.query-nav navigator{
+    padding: 28rpx 20rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+.query-nav .query-icon{
+    width: 40rpx;
+    vertical-align: -10rpx;
+    margin-right: 20rpx;
+}
+.query-nav .query-right{
+    float: right;
+}
+.query-nav .query-right .query-num{
+    color: #a6a6a6;
+    line-height: 50rpx;
+}
+
+.query-nav .query-right .arrow{
+    width: 35rpx;
+    vertical-align: -10rpx;
+    margin-left: 40rpx;
+}

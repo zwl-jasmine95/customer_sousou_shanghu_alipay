@@ -1,0 +1,30 @@
+.input-content{
+    margin-top: 20rpx;
+}
+.input-content .input-item{
+    padding: 35rpx 20rpx;
+    height: 158rpx;
+    box-sizing: border-box;
+}
+.input-content .input-item .input-label{
+   margin-bottom: 15rpx;
+}
+.input-content .input-item input,textarea{
+    width: 100%;
+    padding: 0;
+}
+
+.input-content .input-item .input-detail input{
+    width: calc(100% - 50rpx);
+}
+.input-content .input-item .input-detail image{
+    width: 30rpx;
+    margin: 15rpx 0;
+}
+
+.input-content .input-textarea{
+    height: 300rpx;
+}
+.input-content .input-textarea textarea{
+    height: 200rpx;
+}

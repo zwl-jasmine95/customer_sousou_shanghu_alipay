@@ -1,0 +1,292 @@
+/*
+    框架样式覆盖
+*/
+.a-textarea-control textarea { font-size: 12px; }
+/*
+    公共样式
+*/
+page { 
+    background: #f2f2f2; 
+    color: #4e4e4e;
+    font-size: 28rpx;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="idcard"],
+input[type="digit"],
+textarea { 
+    -webkit-appearance: none; 
+    border-radius: 5px; 
+}
+
+/* 常用样式 */
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+
+.my-btn-default{
+    font-size: 30rpx;
+    color: #fff;
+    border: none;
+    background-color:#00bfad;
+    border-radius: 4px;
+    text-align: center;
+}
+.my-btn-default.btn-disabled{
+    background-color: #a6a6a6;
+    color: #fff;
+}
+.my-btn-gray{
+    font-size: 30rpx;
+    color: #fff;
+    border: none;
+    background-color:#a6a6a6;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.white{
+    background-color: #fff;
+}
+.bg-green{
+    background-color: #00bfad;
+}
+
+/* 字体大小 */
+.fs-s{
+    font-size: 24rpx;
+}
+.fs-b{
+    font-size: 30rpx;
+}
+.fs-l{
+    font-size: 48rpx;
+}
+.fs-n{
+    font-size: 28rpx;  /*默认*/
+}
+
+.fw-b{
+    font-weight: bold;
+}
+
+/* 边框 */
+.br-b{
+    border-bottom: solid 1rpx #efefef;
+}
+.br-t{
+    border-top: solid 1rpx #efefef;
+}
+.br-l{
+    border-left: solid 1rpx #efefef;
+}
+.br-r{
+    border-right: solid 1rpx #efefef;
+}
+
+/* 字体颜色 */
+.cr-green{
+    color: #00bfad;
+}
+.cr-a{
+    color: #a6a6a6;
+}
+.cr-n{
+    color: #4e4e4e;  /*默认*/
+}
+.cr-w{
+    color: white;
+}
+
+.font-b{
+    font-weight: bold;
+}
+
+/* 文字超出部分使用省略号 */
+.single-text{
+    -o-text-overflow: ellipsis;
+	text-overflow: ellipsis;	  
+	overflow: hidden;
+	white-space: nowrap;
+    max-width: 100%;   /*宽度*/
+}
+.multi-text{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/* 
+多次使用模块 
+*/
+/* 没有数据状态 */
+.empty-box{
+    text-align: center;
+}
+.empty-box image{
+    width: 360rpx;
+    margin: 200rpx 0 60rpx 0;
+}
+.empty-box .empty-tip{
+    font-size: 28rpx;
+    color: #a6a6a6;
+}
+
+
+/* 底部固定提交按钮 */
+/* 
+<view class="bottom-btn-box">
+    <button type="default" class="my-btn-default" hover-class="none" onTap="modify_address">确认修改</button>
+</view> 
+*/
+.bottom-btn-box{
+    box-sizing: border-box;
+    height: 158rpx;
+    padding: 34rpx 20rpx;
+    background: #fff;
+}
+/* page{
+    min-height: calc(100vh - 158rpx);
+} */
+.bottom-btn-box.fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.bottom-btn-box button{
+    height: 90rpx;
+    line-height: 90rpx;
+}
+
+
+/* data-bottom-line */
+.data-bottom-line{
+    padding: 40rpx;
+    overflow: hidden;
+}
+.data-bottom-line view { 
+    width: 33.3%; 
+}
+.data-bottom-line .left, .data-bottom-line .right{
+    margin-top: 5px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.data-bottom-line .msg{
+    color: #999;
+    text-align: center;
+    font-size: 24rpx;
+}
+
+/* nodata */
+.nodata { 
+    padding-top: 15%; 
+    padding-bottom: 10px;
+    text-align: center;
+}
+.nodata .nodata-text{
+    color: #999;
+    font-size: 24rpx;
+}
+.nodata image { margin-top: 15px !important; }
+.nodata-loding image { background-size: inherit !important; }
+
+
+/**
+ 头部搜索框 
+ <view class="search-content white">
+    <view class="search-box clearfix">
+        <input class="search fs-s" type="text" onBlur="input_event" placeholder="搜索" />
+        <view class="search-btn" onTap="search_event">
+            <icon class="search-icon" type="search" size="16" />
+        </view>
+    </view>
+</view>
+ 
+ */
+.search-content{
+    height: 120rpx;
+    padding: 25rpx 20rpx;
+    box-sizing: border-box;
+}
+.search-box{
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.search-box .search{
+    width: calc(100% - 111rpx);
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    color: #4e4e4e;
+}
+.search-box  .search-btn{
+    float: right;
+    width: 100rpx;
+    box-sizing: border-box;
+    margin: 12rpx 0;
+    height: 50rpx;
+    text-align: center;
+    border-left: solid 1px #a6a6a6;
+}
+.search-btn  .search-icon{
+    margin: 8rpx 0;
+}
+/* end 头部搜索框 */
+
+
+/**
+*九宫格
+*<view class="number grid-box">
+    <view class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <text class="grid-title">累计配送总数</text>
+          <image src="/images/index-1.png" class="grid-icon" mode="aspectFit" />
+          <text class="grid-text">{{}}</text>
+      </view>
+    </view>
+*</view>
+*
+*/
+.grid-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.grid-box .grid-item{
+    width: 33.3%;  /*!*/
+    height: 180rpx;  /*!*/
+    box-sizing: border-box;
+    position: relative;
+}
+.grid-box .grid-item .grid-item-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-box .grid-item .grid-item-wrapper .grid-icon{
+    width: 30%;
+    height: 30%;
+    margin-bottom: 20rpx;
+}
+.grid-box .grid-item .grid-item-wrapper .grid-title{
+    margin-bottom: 20rpx;
+}
+.grid-box .grid-item .grid-item-wrapper .grid-text{
+    font-size: 30rpx;
+}
+
+

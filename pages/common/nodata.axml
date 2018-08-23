@@ -1,0 +1,20 @@
+<template name="nodata">
+  <!-- 1 加载中 -->
+  <view a:if="{{status == 1}}" class="nodata nodata-loding">
+    <text class="nodata-text">加载中...</text>
+  </view>
+
+  <!-- 2 处理错误 -->
+  <view a:elif="{{status == 2}}" class="nodata">
+    <text class="nodata-text">{{msg || '处理错误'}}</text>
+  </view>
+
+  <!-- 0 默认没有数据 -->
+  <!-- <view a:elif="{{status == 0}}" class="nodata">
+    <text class="nodata-text">{{msg || '没有数据'}}</text>
+  </view> -->
+  <view a:elif="{{status == 0}}" class="empty-box">
+    <image src="/images/empty.png" mode="widthFix" />
+    <view class="empty-tip">{{msg || '这里人迹罕至，什么都没有'}}</view>
+  </view>
+</template>

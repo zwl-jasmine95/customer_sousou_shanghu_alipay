@@ -1,0 +1,49 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/put-forward/put-forward",
+      "pages/login/login",
+      "pages/user/user",
+      "pages/news/news",
+      "pages/take-list/take-list",
+      "pages/receive-list/receive-list",
+      "pages/invitation/invitation",
+      "pages/help/help",
+      "pages/help-list/help-list",
+      "pages/query/query",
+      "pages/take-detail/take-detail",
+      "pages/receive-detail/receive-detail",
+      "pages/put-forward-list/put-forward-list",
+      "pages/member/member",
+      "pages/fund-list/fund-list",
+      "pages/user-detail/user-detail",
+      "pages/contract/contract",
+      "pages/scan/scan",
+      "pages/scan-detail/scan-detail",
+      "pages/user-search/user-search",
+      "pages/audit/audit"
+    ],
+    "window": {
+      "defaultTitle": "嗖嗖递"
+    },
+    "tabBar": {
+      "textColor": "#8a8a8a",
+      "selectedColor": "#00bfad",
+      "backgroundColor": "#fff",
+      "items": [
+        {
+          "pagePath": "pages/index/index",
+          "icon": "/images/nav-icon-home.png",
+          "activeIcon": "/images/nav-icon-home-active.png",
+          "name": "首页"
+        },
+        {
+          "pagePath": "pages/put-forward/put-forward",
+          "icon": "/images/nav-icon-putforward.png",
+          "activeIcon": "/images/nav-icon-putforward-active.png",
+          "name": "提现"
+        }
+      ]
+    }
+  }
+  

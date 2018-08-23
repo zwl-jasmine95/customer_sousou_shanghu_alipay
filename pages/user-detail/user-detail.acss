@@ -1,0 +1,27 @@
+.input-content{
+    margin-top: 20rpx;
+}
+.input-content .input-item{
+    padding: 35rpx 20rpx;
+    height: 158rpx;
+    box-sizing: border-box;
+}
+.input-content .input-item .input-label{
+   margin-bottom: 15rpx;
+}
+.input-content .input-item input{
+    width: 100%;
+    padding: 0;
+}
+
+.input-content .upload-box{
+    height: auto;
+}
+.upload-box .img-box>image{
+    margin: 20rpx 10rpx;
+    width: calc(33.3% - 20rpx);
+    height: 150rpx;
+}
+.upload-box .upload{
+    width: 130rpx;
+}

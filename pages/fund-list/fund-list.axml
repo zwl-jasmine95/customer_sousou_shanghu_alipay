@@ -1,0 +1,41 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="content">
+        <view class="fund-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}">
+            <view class="card-title clearfix br-b">
+                <text class="fl fs-b">{{item.name}}</text>
+                <text class="fr fs-s cr-a">{{item.time}}</text>
+            </view>
+            <view class="card-detail">
+                <view class="card-item">
+                    <text>操作人员：</text>
+                    <text class="cr-a">{{item.person}}</text>
+                </view>
+                <view class="card-item">
+                    <text>操作类型：</text>
+                    <text class="cr-a">{{item.type}}</text>
+                </view>
+                <view class="card-item">
+                    <text>操作金额：</text>
+                    <text>￥{{item.price}}</text>
+                </view>
+                <view class="card-item">
+                    <text>原始金额：</text>
+                    <text>￥{{item.original}}</text>
+                </view>
+                <view class="card-item">
+                    <text>最新余额：</text>
+                    <text>￥{{item.balance}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+
+</scroll-view>

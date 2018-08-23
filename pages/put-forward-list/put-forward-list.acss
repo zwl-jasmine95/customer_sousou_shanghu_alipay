@@ -1,0 +1,17 @@
+
+.scroll-box{
+    height:100vh;
+}
+/* 主体 */
+.list-content{
+    margin: 20rpx;
+}
+.list-card{
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.list-card .item{
+    padding: 15rpx 0;
+}

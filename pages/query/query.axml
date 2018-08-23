@@ -1,0 +1,28 @@
+<view class="query-nav">
+  <navigator url="/pages/take-list/take-list" class="br-b clearfix">
+    <image src="/images/take-list.png" class="query-icon" mode="widthFix" />
+    <text class="query-name">取件记录</text>
+    <view class="query-right">
+      <text class="query-num">{{take}}</text>
+      <image src="/images/arrow.png" class="arrow" mode="widthFix" />
+    </view>
+  </navigator>
+
+  <navigator url="/pages/receive-list/receive-list" class="br-b clearfix">
+    <image src="/images/receive-list.png" class="query-icon" mode="widthFix" />
+    <text class="query-name">收件记录</text>
+    <view class="query-right">
+      <text class="query-num">{{receive}}</text>
+      <image src="/images/arrow.png" class="arrow" mode="widthFix" />
+    </view>
+  </navigator>
+
+  <navigator url="/pages/member/member" class="br-b clearfix">
+    <image src="/images/member.png" class="query-icon" mode="widthFix" />
+    <text class="query-name">会员信息</text>
+    <view class="query-right">
+      <text class="query-num">{{member}}</text>
+      <image src="/images/arrow.png" class="arrow" mode="widthFix" />
+    </view>
+  </navigator>
+</view>

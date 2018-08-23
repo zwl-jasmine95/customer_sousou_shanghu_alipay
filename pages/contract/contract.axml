@@ -1,0 +1,73 @@
+<form onSubmit="form_submit" onReset="form_reset">
+    <view class="input-content white">
+        <view class="input-item br-b">
+            <view class="input-label">站点名称：</view>
+            <input type="text" name="merchant" class="fs-n cr-n" placeholder="填写站点名称" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">个体户名称：</view>
+            <input type="text" name="name" class="fs-n cr-n" placeholder="填写个体户名称" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">营业执照号码：</view>
+            <input type="text" name="number" class="fs-n cr-n" placeholder="填写营业执照号码" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">所在省市区：</view>
+            <!-- 地区选择 -->
+            <view class="select-address br-b clearfix">
+                <view class="section fl br-r">
+                    <picker name="receive_province" onChange="select_province" value="{{province_value}}" range="{{province_list}}" range-key="name">
+                        <view class="name">{{province_list[province_value].name || '请选择省'}}</view>
+                    </picker>
+                </view>
+                <view class="section fl br-r">
+                    <picker name="receive_city" onChange="select_city" value="{{city_value}}" range="{{city_list}}" range-key="name">
+                        <view class="name">{{city_list[city_value].name || '请选择市'}}</view>
+                    </picker>
+                </view>
+                <view class="section fl">
+                    <picker name="receive_county" onChange="select_county" value="{{county_value}}" range="{{county_list}}" range-key="name">
+                        <view class="name">{{county_list[county_value].name || '请选择区/县'}}</view>
+                    </picker>
+                </view>
+            </view>
+            <!-- end地区选择 -->
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">详细地址：</view>
+            <input type="text" name="address" class="fs-n cr-n" placeholder="填写详细地址" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">负责人：</view>
+            <input type="text" name="person" class="fs-n cr-n" placeholder="填写负责人" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">联系电话：</view>
+            <input type="number" name="tel" class="fs-n cr-n" placeholder="填写联系电话" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">可配送人员数量：</view>
+            <input type="number" name="num" class="fs-n cr-n" placeholder="填写可配送人员数量" />
+        </view>
+        <view class="input-item upload-box">
+            <view class="input-label">营业执照照片：</view>
+            <view class="img-box">
+                <image a:for="{{license_list}}" src="{{item}}" mode="scaleToFill">
+            </view>
+            <image class="upload" a:if="{{license_list.length < 3}}" src="/images/upload.png" mode="widthFix" data-tag="0" onTap="upload_event">
+        </view>
+        <view class="input-item upload-box">
+            <view class="input-label">配送人员健康证照片：</view>
+            <view class="img-box">
+                <image a:for="{{certificate_list}}" src="{{item}}" mode="scaleToFill">
+            </view>
+            <image class="upload" a:if="{{certificate_list.length < 3}}" src="/images/upload.png" mode="widthFix" data-tag="1" onTap="upload_event">
+        </view>
+    </view>
+
+    <view class="btn-box">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">提交</button>
+        <button type="default" formType="reset" class="my-btn-gray" hover-class="none">取消</button>
+    </view> 
+<form>

@@ -1,0 +1,7 @@
+<view a:if="{{is_show_input == true}}" class="content">
+    <view class="input-box clearfix">
+        <input class="input fs-n fl" name="code" placeholder="快递单号" onInput="bind_form_code_input" />
+        <button class="input-btn fl fs-b" hover-class="none" onTap="code_submit_event">确认</button>
+    </view>
+    <button type="default" class="my-btn-default btn" hover-class="none" onTap="scan_event">扫一扫</button>
+</view>

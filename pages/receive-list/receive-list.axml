@@ -1,0 +1,97 @@
+<view class="search-content white">
+    <view class="search-box clearfix">
+        <input class="search fs-s" type="text" onBlur="input_event" placeholder="搜索" />
+        <view class="search-btn" onTap="search_event">
+            <icon class="search-icon" type="search" size="16" />
+        </view>
+    </view>
+</view>
+
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="list-content">
+        <navigator class="list-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}" url="/pages/receive-detail/receive-detail?id={{item.id}}">
+            <view class="list-msg">
+                <view class="item clearfix">
+                    <text class="title">{{item.sender_name}}  {{item.sender_tel}}</text>
+                    <text class="msg fs-s fr">{{item.sender_time}}</text>
+                </view>
+                <view class="item clearfix">
+                    <text class="title">{{item.receive_name}}  {{item.receive_tel}}</text>
+                    <text class="msg fs-s cr-a fr">{{item.status_text}}</text>
+                </view>
+                <view class="item clearfix" a:if="{{item.appointment_time}}">
+                    <view class="title fl">
+                        <text class="title-tag">预约时间：</text>
+                        <text class="title-detail cr-a">{{item.appointment_time}}</text>
+                    </view>
+                </view>
+                <view class="item clearfix" a:if="{{item.arrival_time}}">
+                    <view class="title fl">
+                        <text class="title-tag">预达时间：</text>
+                        <text class="title-detail cr-a">{{item.arrival_time}}</text>
+                    </view>
+                    <text class="msg fs-s fr price" a:if="{{item.price}}">￥{{item.price}}</text>
+                </view>
+                
+            </view>
+
+            <view class="list-btn br-t clearfix" a:if="{{item.status < 5}}">
+                <button type="default" a:if="{{item.status == 1}}" class="fr my-btn-default" data-id="{{item.id}}" data-index="{{index}}" catchTap="confirm_event" hover-class="none">
+                    确认
+                </button>
+                <button type="default" a:if="{{item.status == 2}}" class="fr my-btn-default" data-id="{{item.id}}" data-index="{{index}}" catchTap="confirm_price" hover-class="none">
+                    确认金额
+                </button>
+                <button type="default" a:if="{{item.status == 3}}" class="fr my-btn-default" data-id="{{item.id}}" data-index="{{index}}" catchTap="modify_price" hover-class="none">
+                    修改金额
+                </button>
+                <button type="default" a:if="{{item.status == 4}}" class="fr my-btn-default" data-id="{{item.id}}" data-index="{{index}}" catchTap="out_event" hover-class="none">
+                    出库
+                </button>
+            </view>
+        </navigator>
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+</scroll-view>
+
+<view class="popup" a:if="{{popup_type == 1}}">
+    <!-- 修改金额 -->
+    <form class="popup-box white" onSubmit="confirm_modify_price">
+        <view class="close-box">
+            <text class="close" onTap="close_event">×</text>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">快件金额</view>
+            <input type="text" name="money" class="fs-n cr-n" placeholder="请输入快件金额" />
+        </view>
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">确认</button>
+    <form>
+<view>
+
+<view class="popup" a:if="{{popup_type == 2}}">
+    <!-- 出库 -->
+    <form class="popup-box white" onSubmit="confirm_out_event">
+        <view class="close-box">
+            <text class="close" onTap="close_event">×</text>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">快递公司</view>
+            <picker class="input-detail" name="company" onChange="select_company" value="{{company_value}}" range="{{company_list}}" range-key="name">
+                <view class="row clearfix">
+                    <view class="row-extra fl">{{company_list[company_value] || '请选择快递公司'}}</view>
+                    <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+                </view>
+            </picker>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">快递编号</view>
+            <input type="text" name="number" class="fs-n cr-n" placeholder="请输入快递编号" />
+        </view>
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">提交</button>
+    <form>
+</view>

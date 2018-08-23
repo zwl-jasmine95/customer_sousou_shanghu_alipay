@@ -1,0 +1,33 @@
+.money-box{
+    height: 124rpx;
+    box-sizing: border-box;
+    padding: 30rpx 20rpx;
+}
+.money-box .money-item image{
+    width: 50rpx;
+    margin-right: 20rpx;
+    vertical-align: -15rpx;
+}
+.money-box .money-item:nth-child(2){
+    text-align: right;
+}
+.money-box .money-item:nth-child(2) navigator{
+    margin-bottom: 15rpx;
+}
+
+.input-content{
+    margin-top: 20rpx;
+}
+.input-content .input-item{
+    padding: 35rpx 20rpx;
+    height: 158rpx;
+    box-sizing: border-box;
+}
+.input-content .input-item .input-label{
+   margin-bottom: 15rpx;
+}
+.input-content .input-item input{
+    width: 100%;
+    padding: 0;
+
+}

@@ -1,0 +1,53 @@
+<view class="content white">
+    <view class="person-box br-b">
+        <view class="person">
+            <view class="person-msg fs-b">{{take_name}}  {{take_tel}}</view>
+            <text class="person-address cr-a fs-s">{{take_address}}</text>
+        </view>
+        <view class="person">
+            <view class="person-msg fs-b">{{post_name}}  {{post_tel}}</view>
+            <text class="person-address cr-a fs-s">{{post_address}}</text>
+        </view>
+    </view>
+    
+    <view class="desc fs-s br-b">
+        <view class="desc-item">
+            <text class="item-title">订单状态：</text>
+            <text class="item-detail cr-a">{{status_text}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">订单时间</text>
+            <text class="item-detail cr-a">{{order_time}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">预约时间：</text>
+            <text class="item-detail cr-a">{{appointment_time}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">预达时间：</text>
+            <text class="item-detail cr-a">{{pre_arrival_time}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">收件时间：</text>
+            <text class="item-detail cr-a">{{receive_time}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">完成时间：</text>
+            <text class="item-detail cr-a">{{finish_time}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">订单金额：</text>
+            <text class="item-detail fs-n">￥{{price}}</text>
+        </view>
+    </view>
+    <view class="desc fs-s">
+        <view class="desc-item">
+            <text class="item-title">快递公司：</text>
+            <text class="item-detail cr-a">{{express}}</text>
+        </view>
+        <view class="desc-item">
+            <text class="item-title">快递单号：</text>
+            <text class="item-detail cr-a">{{express_num}}</text>
+        </view>
+    </view>
+</view>

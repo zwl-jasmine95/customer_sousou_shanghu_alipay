@@ -1,0 +1,36 @@
+<view class="index-head white clearfix">
+  <navigator url="/pages/user/user" class="user clearfix">
+    <image class="portrait" src="{{img}}" mode="widthFix" />
+    <view class="user-name">{{name}}</view>
+  </navigator>
+
+  <navigator class="news" url="/pages/news/news">
+    <image src="/images/news.png" mode="widthFix" />
+  </navigator>
+</view>
+
+<swiper
+  indicator-dots=true
+  autoplay=true
+  circular=true
+  class="index-banner white"
+  a:if="{{banner_list.length > 0}}"
+>
+  <block a:for="{{banner_list}}">
+    <swiper-item>
+      <image src="{{item.images_url}}" mode="widthFix" data-jump_url="{{item.jump_url}}" onTap="img_nav" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="index-content white">
+  <view class="grid-box">
+    <navigator a:for="{{grid_list}}" url="/pages/{{item.url}}" class="grid-item br-b">
+      <view class="grid-item-wrapper">
+          <image src="/images/{{item.icon}}.png" class="grid-icon" mode="aspectFit" />
+          <text class="grid-text">{{item.text}}</text>
+          <text class="grid-num" a:if="{{index < 6}}">{{item.num}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>

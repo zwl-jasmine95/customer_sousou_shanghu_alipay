@@ -1,0 +1,34 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="list-content">
+        <view class="list-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}" url="/pages/take-detail/take-detail?id={{item.id}}">
+            <view class="item">
+                <text class="item-tag">订单时间：</text>
+                <text class="item-detail cr-a">{{item.order_time}}</text>
+            </view>
+            <view class="item">
+                <text class="item-tag">提现金额：</text>
+                <text class="item-detail">￥{{item.money}}</text>
+            </view>
+            <view class="item">
+                <text class="item-tag">收款账户：</text>
+                <text class="item-detail cr-a">{{item.receivable}}</text>
+            </view>
+            <view class="item">
+                <text class="item-tag">处理状态：</text>
+                <text class="item-detail cr-a">{{item.status_text}}</text>
+            </view>
+            <view class="item" a:if="{{item.error}}">
+                <text class="item-tag">失败原因：</text>
+                <text class="item-detail cr-a">{{item.error}}</text>
+            </view>
+        </view>
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+    
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+</scroll-view>
+

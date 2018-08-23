@@ -1,0 +1,38 @@
+<form onSubmit="form_submit">
+    <view class="input-content white">
+        <view class="input-item br-b">
+            <view class="input-label">快递编号</view>
+            <input type="number" name="number" value="{{number}}" class="fs-n cr-n input-detail" disabled />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">快递公司</view>
+            <picker class="input-detail" name="company" onChange="select_company" value="{{company_value}}" range="{{company_list}}" range-key="name">
+                <view class="row clearfix">
+                    <view class="row-extra fl">{{company_list[company_value] || '请选择快递公司'}}</view>
+                    <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+                </view>
+            </picker>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">关联用户</view>
+            <navigator url="/pages/user-search/user-search" class="input-detail row">
+                <view class="row-extra fl">{{user.name}}</view>
+                <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+            </navigator>
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">货架编号</view>
+            <picker class="input-detail" name="shelf" onChange="select_shelf" value="{{shelf_value}}" range="{{shelf_list}}" range-key="name">
+                <view class="row clearfix">
+                    <view class="row-extra fl">{{shelf_list[shelf_value] || '请选择货架编号'}}</view>
+                    <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+                </view>
+            </picker>
+        </view>
+        
+    </view>
+
+    <view class="bottom-btn-box fixed">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">确认添加</button>
+    </view> 
+<form>

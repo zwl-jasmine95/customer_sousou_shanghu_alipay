@@ -1,0 +1,19 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="content">
+        <view class="news-card white br-b fs-s" a:if="{{data_list.length > 0}}" a:for="{{data_list}}">
+            <view class="news-box clearfix">
+                <text class="news-title fs-n">{{item.title}}</text>
+                <text class="news-time">{{item.add_time}}</text>
+            </view>
+            <view class="news-detail">{{item.detail}}</view>
+        </view>
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+
+</scroll-view>

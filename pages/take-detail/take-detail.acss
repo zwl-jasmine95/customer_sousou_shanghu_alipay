@@ -1,0 +1,17 @@
+.content{
+    margin: 20rpx 0;
+}
+
+.person{
+    padding: 30rpx 20rpx;
+}
+.person .person-msg{
+    margin-bottom: 20rpx;
+}
+
+.desc{
+    padding:20rpx;
+}
+.desc .desc-item{
+    padding: 25rpx 0;
+}

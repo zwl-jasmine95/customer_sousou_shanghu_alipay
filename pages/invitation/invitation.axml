@@ -1,0 +1,11 @@
+
+<image src="/images/invitation.png" class="banner" mode="widthFix" />
+
+<view class="cr-a tip">推荐10人入驻即可提交审核</view>
+
+<view class="cr-green tip">目前还差{{complete_num}}人完成</view>
+
+<view class="btn-box">
+    <navigator class="my-btn-default btn" url="/pages/contract/contract">马上去推荐</navigator>
+    <button type="default" class="my-btn-gray btn" hover-class="none" onTap="back_event">先逛逛</button>
+</view>

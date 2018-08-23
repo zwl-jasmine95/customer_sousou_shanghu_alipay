@@ -1,0 +1,21 @@
+.scroll-box{
+    /* height:100vh; */
+}
+.news-card{
+    padding: 35rpx 20rpx;
+    color: #a6a6a6;
+}
+.news-card .news-box{
+    margin-bottom: 20rpx;
+}
+.news-card .news-title{
+    padding-left: 20rpx;
+    color: #4e4e4e;
+}
+.news-card .news-time{
+    float: right;
+}
+.news-card .news-detail{
+    padding: 0 20rpx 0 20rpx;
+    line-height: 36rpx;
+}

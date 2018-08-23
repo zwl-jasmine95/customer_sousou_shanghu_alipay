@@ -1,0 +1,31 @@
+<form onSubmit="form_submit">
+    <view class="money-box clearfix white">
+        <view class="money-item fl fs-b">
+            <image src="/images/nav-icon-putforward.png" mode="widthFix" />
+            <text class="font-b">{{money}}元</text>
+        </view>
+        <view class="money-item fr">
+            <navigator class="fs-b cr-green" url="/pages/put-forward-list/put-forward-list">提现记录</navigator>
+            <text class="cr-a">最低100元起提，最高500元封顶</text>
+        </view>
+    </view>
+
+    <view class="input-content white">
+        <view class="input-item br-b">
+            <view class="input-label">提现金额</view>
+            <input type="text" name="money_num" class="fs-n cr-n" placeholder="填写提现金额" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">收款姓名</view>
+            <input type="text" name="name" class="fs-n cr-n" placeholder="填写收款姓名" />
+        </view>
+        <view class="input-item">
+            <view class="input-label">收款支付宝账户</view>
+            <input type="text" name="alipay_account" class="fs-n cr-n" placeholder="填写收款支付宝账户" />
+        </view>
+    </view>
+
+    <view class="bottom-btn-box fixed">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">提交</button>
+    </view> 
+<form>

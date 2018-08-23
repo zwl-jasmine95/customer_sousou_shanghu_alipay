@@ -1,0 +1,31 @@
+<form onSubmit="form_submit">
+    <view class="input-content white">
+        <view class="input-item br-b">
+            <view class="input-label">详细地址：</view>
+            <input type="text" name="address" class="fs-n cr-n" placeholder="填写详细地址" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">负责人：</view>
+            <input type="text" name="person" class="fs-n cr-n" placeholder="填写负责人" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">联系电话：</view>
+            <input type="number" name="tel" class="fs-n cr-n" placeholder="填写联系电话" />
+        </view>
+        <view class="input-item br-b">
+            <view class="input-label">可配送人员数量：</view>
+            <input type="number" name="num" class="fs-n cr-n" placeholder="填写可配送人员数量" />
+        </view>
+        <view class="input-item upload-box">
+            <view class="input-label">配送人员健康证照片：</view>
+            <view class="img-box">
+                <image a:for="{{upload_list}}" src="{{item}}" mode="scaleToFill">
+            </view>
+            <image class="upload" a:if="{{upload_list.length < 3}}" src="/images/upload.png" mode="widthFix" onTap="upload_event">
+        </view>
+    </view>
+
+    <view class="bottom-btn-box fixed">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">提交</button>
+    </view> 
+<form>

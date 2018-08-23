@@ -1,0 +1,17 @@
+<view class="box" a:if="{{status == 1}}">
+    <image src="/images/audit-1.png" class="banner" mode="widthFix" />
+    <view class="tip cr-a">正在审核中...</view>
+    <button type="default" class="my-btn-default btn" hover-class="none" onTap="back_event">返回</button>
+</view>
+
+<view class="box" a:if="{{status == 2}}">
+    <image src="/images/audit-2.png" class="banner" mode="widthFix" />
+    <view class="tip">已完成{{number}}人</view>
+    <button type="default" class="my-btn-default btn" hover-class="none" onTap="audit_event">提交审核</button>
+</view>
+
+<view class="box" a:if="{{status == 3}}">
+    <image src="/images/audit-1.png" class="banner" mode="widthFix" />
+    <view class="tip cr-a">审核失败</view>
+    <button type="default" class="my-btn-default btn" hover-class="none" onTap="audit_event">重新提交审核</button>
+</view>
