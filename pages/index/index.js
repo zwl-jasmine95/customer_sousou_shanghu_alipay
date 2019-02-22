@@ -5,7 +5,7 @@ Page({
     img: app.data.default_user_head_src,
     name: "商户中心",
     banner_list: [{
-      images_url:'/images/default-user.png'
+      images_url:'/images/banner.png'
     }],
     grid_list: [{
       url:'scan/scan',
